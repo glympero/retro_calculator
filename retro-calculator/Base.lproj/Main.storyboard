@@ -286,6 +286,18 @@
                                 <color key="textColor" red="0.29408015780000002" green="0.6463511139" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deg-dm-ehk" userLabel="ClearButton">
+                                <rect key="frame" x="250" y="550" width="100" height="34"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="79i-nj-Oce"/>
+                                    <constraint firstAttribute="width" constant="100" id="B1r-3s-2Sq"/>
+                                </constraints>
+                                <state key="normal" image="clear"/>
+                                <connections>
+                                    <action selector="onClearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CRK-rS-M23"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -294,6 +306,8 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nx5-PC-Sp7" secondAttribute="bottom" id="CeL-P2-V9R"/>
                             <constraint firstItem="Xhh-VW-tAa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="26.5" id="Hip-br-9zT"/>
                             <constraint firstItem="9xG-9h-hyL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="JIh-bw-laA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="deg-dm-ehk" secondAttribute="bottom" constant="16" id="M32-Yf-4RG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="deg-dm-ehk" secondAttribute="bottom" constant="5" id="NvU-tA-WZB"/>
                             <constraint firstAttribute="trailing" secondItem="nx5-PC-Sp7" secondAttribute="trailing" id="Va4-e7-QP7"/>
                             <constraint firstItem="Vkq-Ve-CcR" firstAttribute="top" secondItem="Xhh-VW-tAa" secondAttribute="top" constant="15" id="WWr-Sc-hXI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9xG-9h-hyL" secondAttribute="bottom" id="Z3e-mZ-Bsg"/>
@@ -302,8 +316,14 @@
                             <constraint firstItem="Xhh-VW-tAa" firstAttribute="trailing" secondItem="Vkq-Ve-CcR" secondAttribute="trailing" constant="24" id="fmR-g9-eIO"/>
                             <constraint firstItem="nx5-PC-Sp7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kpu-Gd-nc7"/>
                             <constraint firstItem="Bsz-wv-SPz" firstAttribute="centerX" secondItem="Xhh-VW-tAa" secondAttribute="centerX" id="y9K-fB-5gv"/>
+                            <constraint firstItem="deg-dm-ehk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ybG-2H-T0J"/>
                             <constraint firstItem="Bsz-wv-SPz" firstAttribute="centerY" secondItem="Xhh-VW-tAa" secondAttribute="centerY" constant="36" id="z0L-PB-d0e"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="M32-Yf-4RG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="outputLbl" destination="Vkq-Ve-CcR" id="AtN-XG-uRB"/>
@@ -327,6 +347,7 @@
         <image name="9" width="111" height="114"/>
         <image name="add" width="111" height="114"/>
         <image name="backpanel" width="620" height="938"/>
+        <image name="clear" width="333" height="114"/>
         <image name="counter" width="516" height="133"/>
         <image name="divide" width="111" height="114"/>
         <image name="equal" width="111" height="114"/>

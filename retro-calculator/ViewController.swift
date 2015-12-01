@@ -24,6 +24,7 @@ class ViewController: UIViewController {
    
     //Properties
     var btnSound = AVAudioPlayer!()
+    
     var runningNumber = ""
     var leftValStr = ""
     var rightValStr = ""
@@ -77,7 +78,21 @@ class ViewController: UIViewController {
     
     @IBAction func onEqualPressed(sender: AnyObject) {
         processOperation(currentOperation)
+        initializeCalculator()
 
+    }
+    
+    @IBAction func onClearPressed(sender: AnyObject) {
+        initializeCalculator()
+        outputLbl.text = "0"
+    }
+    
+    func initializeCalculator(){
+        runningNumber = ""
+        leftValStr = ""
+        rightValStr = ""
+        result = ""
+        currentOperation = Operation.Empty
     }
     
     func processOperation(op: Operation){
